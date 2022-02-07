@@ -3,9 +3,9 @@ import pickle
 from flask import Flask, render_template , request, redirect, jsonify
 
 app = Flask(__name__)
-model = pickle.load(open('C:/Users/abarn/Downloads/startup/profit_prediction_model.pkl','rb'))
+model = pickle.load(open('profit_prediction_model.pkl','rb'))
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 def index():
     return render_template('index.html')
 
